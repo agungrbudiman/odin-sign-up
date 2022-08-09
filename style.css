@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 35vw 65vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebar {
+    background-image: url('img/halie-west-25xggax4bSA-unsplash.jpeg');
+    background-position: center;
+    position: relative;
+}
+
+.hero {
+    height: 125px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 125px;
+    width: 100%;
+}
+
+.hero .logo {
+    height: 90%;
+}
+
+.hero .title {
+    color: white;
+    font-size: 72px;
+    font-family: Norse, sans-serif;
+    margin-top: 20px; /* remove whitespace */
+}
+
+.credit {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.credit, .credit a {
+    color: rgba(255,255,255,0.6);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9fafb;
+}
+
+.top, .middle, .bottom {
+    padding: 35px;
+}
+
+.top {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.middle {
+    background-color: #ffffff;
+    box-shadow: 0 1px 15px #e0e1e2;
+}
+
+.bottom p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+.bottom a:hover {
+    filter: brightness(175%);
+}
+
+#form {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 50px;
+    row-gap: 25px;
+}
+
+.input-container {
+   width: max(35%, 225px);
+}
+
+#form h1 {
+    margin: 0 0 15px 0;
+}
+
+label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+}
+
+input:focus {
+    box-shadow: 2px 4px 4px lightgray;
+}
+
+button {
+    color: white;
+    background-color: #596D48;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+button:hover {
+    background-color: #f9fafb;
+    color: black;
+    border: 2px solid #596D48;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        grid-template-columns: auto;
+    }
+    .sidebar {
+        position: static;
+    }
+    .hero {
+        position: static;
+    }
+    .credit {
+        display: none;
+    }
+    .middle h1, .bottom {
+        text-align: center;
+    }
+    .middle #form {
+        justify-content: center;
+    }
+}
