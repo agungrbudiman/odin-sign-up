@@ -63,7 +63,6 @@ body {
 }
 
 .top {
-    font-size: 1vw;
     font-weight: 600;
 }
 
@@ -97,13 +96,22 @@ body {
 #form input {
     width: 100%;
     box-sizing: border-box;
-    font-size: 16px;
     border: 1px solid #E5E7EB;
     border-radius: 2px;
+    padding: 5px;
 }
 
 #form input:focus {
     box-shadow: 2px 4px 4px lightgray;
+}
+
+#form #warning_label {
+    font-size: 10px;
+    color: red;
+}
+
+#form .warning {
+    border: 1px solid red;
 }
 
 .bottom p {

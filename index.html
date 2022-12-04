@@ -26,27 +26,28 @@
             <form id="form" action="#" method="post">
                 <div class="input-container">
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" name="first_name" id="first_name" placeholder="Thor">
+                    <input type="text" name="first_name" id="first_name" placeholder="Thor" required>
                 </div>
                 <div class="input-container">
                     <label for="last_name">LAST NAME</label>
-                    <input type="text" name="last_name" id="last_name" placeholder="Odinson">
+                    <input type="text" name="last_name" id="last_name" placeholder="Odinson" required>
                 </div>
                 <div class="input-container">
                     <label for="email">EMAIL</label>
-                    <input type="email" name="usermail" id="email" placeholder="thor_odinson@gmail.com">
+                    <input type="email" name="usermail" id="email" placeholder="thor_odinson@gmail.com" required>
                 </div>
                 <div class="input-container">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" name="userphone" id="phone" placeholder="+628123456789">
+                    <input type="tel" name="userphone" id="phone" placeholder="+62123456789" pattern="\+[0-9]{2}[0-9]{9,12}" required>
                 </div>
                 <div class="input-container">
                     <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
+                    <input class="warning" type="password" name="password" id="password" required>
+                    <div id="warning_label">* Passwords do not match</div>
                 </div>
                 <div class="input-container">
-                    <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_password">
+                    <label for="password_confirm">CONFIRM PASSWORD</label>
+                    <input class="warning" type="password" id="password_confirm" required>
                 </div>
             </form>
         </div>
